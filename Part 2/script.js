@@ -166,14 +166,15 @@ const API = {
     }
     
     function toggleTemperature() {
-        const temperatureElements = document.querySelectorAll('.weather-item p');
+        const temperatureElements = document.querySelectorAll('.weather-item p[data-kelvin]');
         temperatureElements.forEach(tempElement => {
             const originalKelvin = parseFloat(tempElement.dataset.kelvin);
             if (!isNaN(originalKelvin)) {
+                const celsiusValue = kelvinToCelsius(originalKelvin).toFixed(2);
                 if (tempElement.textContent.includes('°C')) {
-                    tempElement.textContent = tempElement.textContent.replace(/°C$/, '°K');
+                    tempElement.textContent = tempElement.textContent.replace(`${celsiusValue}°C`, `${originalKelvin}°K`);
                 } else {
-                    tempElement.textContent = tempElement.textContent.replace(/°K$/, `°C (${kelvinToCelsius(originalKelvin).toFixed(2)}°C)`);
+                    tempElement.textContent = tempElement.textContent.replace(`${originalKelvin}°K`, `${celsiusValue}°C`);
                 }
             }
         });
@@ -181,6 +182,7 @@ const API = {
         const toggleButton = document.getElementById('tempToggle');
         toggleButton.textContent = toggleButton.textContent === 'Convert to Celsius' ? 'Convert to Kelvin' : 'Convert to Celsius';
     }
+    
     
     function toggleDarkMode() {
         document.body.classList.toggle('dark-mode');
