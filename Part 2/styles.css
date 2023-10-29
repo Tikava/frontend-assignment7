@@ -15,6 +15,15 @@ body {
     z-index: 1000; /* Ensure it's above other elements */
 }
 
+#map {
+    width: 100%;  /* Allow it to take the full width for better responsiveness */
+    height: 400px;
+    border-radius: 10px;  /* Make the edges rounded to match your general design */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Give it a slight shadow for depth */
+    margin-top: 20px;  /* Add some spacing on top for separation from other elements */
+    overflow: hidden;  /* Ensure the map doesn't overflow its boundaries */
+}
+
 
 .search-bar {
     display: flex;
@@ -183,4 +192,8 @@ body.dark-mode .weather-item h4 {
 
 body.dark-mode .weather-item p {
     color: #aaa;
+}
+
+body.dark-mode #map {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  /* A darker shadow in dark mode for contrast */
 }
