@@ -1,0 +1,41 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: 100%;            /* Take the full height of its parent */
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;           /* Set a max width for the form */
+    padding: 20px;
+    border: 1px solid #ccc; /* Optional: set a border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: set a shadow */
+}
+
+.form label,
+.form input,
+.form button {
+    margin-bottom: 5px; /* Space between form elements */
+}
+
+button {
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+}
+
+.top-right-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
