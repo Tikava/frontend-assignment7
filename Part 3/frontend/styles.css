@@ -7,24 +7,24 @@ body, html {
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center horizontally */
-    align-items: center;     /* Center vertically */
-    height: 100%;            /* Take the full height of its parent */
+    justify-content: center; 
+    align-items: center;     
+    height: 100%;            
 }
 
 .form {
     display: flex;
     flex-direction: column;
-    width: 300px;           /* Set a max width for the form */
+    width: 300px;          
     padding: 20px;
-    border: 1px solid #ccc; /* Optional: set a border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: set a shadow */
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .form label,
 .form input,
 .form button {
-    margin-bottom: 5px; /* Space between form elements */
+    margin-bottom: 5px;
 }
 
 button {
